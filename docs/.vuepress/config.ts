@@ -8,6 +8,7 @@ import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
+
 const DOMAIN_NAME = 'xugaoyi.com' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
@@ -334,7 +335,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           repo: 'blogs', // GitHub 仓库
           owner: 'nbtca', // GitHub仓库所有者
           admin: ['lyq777-Xing','nbtca'], // 对仓库有写权限的人
-          distractionFreeMode: true,
+          // distractionFreeMode: true,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
           id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
           title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
@@ -347,10 +348,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // [
     //   '@vssue/vuepress-plugin-vssue', {
     //     platform: 'github',
-    //     owner: 'lyq777-Xing',
-    //     repo: 'commit-blogs',
-    //     clientId: 'eab4bc3785c46f5127b0',
-    //     clientSecret: 'a8db20bca38b46e5bef127d58918c697bdfe5d2c',
+    //     owner: 'nbtca',
+    //     repo: 'blogs',
+    //     clientId: '85c75557c8864591fdea',
+    //     clientSecret: '6cc0ee9a068cd26f0d0c57ad081ebfad036e7a0c',
     //   }
     // ],
     [

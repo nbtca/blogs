@@ -2,6 +2,11 @@
 import Vue from 'vue'
 import CodeBlock from "@theme/global-components/CodeBlock.vue"
 import CodeGroup from "@theme/global-components/CodeGroup.vue"
+
+// 漂浮插件
+import LetItSnow from 'vue-let-it-snow';
+Vue.use(LetItSnow);
+
 // Register the Vue global component
 Vue.component(CodeBlock)
 Vue.component(CodeGroup)

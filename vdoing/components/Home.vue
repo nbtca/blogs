@@ -158,8 +158,10 @@
           v-if="homeSidebarB"
           v-html="homeSidebarB"
         ></div>
+
       </template>
     </MainLayout>
+    
   </div>
 </template>
 
@@ -191,7 +193,8 @@ export default {
 
       total: 0, // 总长
       perPage: 10, // 每页长
-      currentPage: 1// 当前页
+      currentPage: 1,// 当前页
+  
     }
   },
   computed: {

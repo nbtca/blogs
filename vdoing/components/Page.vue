@@ -39,6 +39,7 @@
         v-if="isShowUpdateBar"
       />
     </main>
+
   </div>
 </template>
 
@@ -56,9 +57,20 @@ export default {
   mixins: [TitleBadgeMixin],
   data() {
     return {
-      updateBarConfig: null
+      updateBarConfig: null,
+
     }
   },
+  mounted () {
+      this.show = true
+    //   setTimeout( () => {
+    //       this.show = false
+    //   }, 5000)
+
+    //   setTimeout( () => {
+    //       this.show = true
+    //   }, 10000)      
+  } ,
   props: ['sidebarItems'],
   components: { PageEdit, PageNav, ArticleInfo, Catalogue, UpdateArticle, RightMenu },
   created() {

@@ -22,7 +22,7 @@ export default {
             count : 12,
             size : 7,
             opacity : 1,
-            images: ['https://nbtca-1310707740.cos.ap-shanghai.myqcloud.com/logo.jpg']
+            images: ['https://nbtca-1310707740.cos.ap-shanghai.myqcloud.com/logo_1.png',]
         },
         show: false      
     }

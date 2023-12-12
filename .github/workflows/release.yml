@@ -1,0 +1,22 @@
+# on: 触发workflow的条件，通常是某些事件，例如：release、push、pull_request等。
+on:
+  push:
+    branches:
+      - main
+
+# workflow的名称。如果省略该字段，默认为当前workflow的文件名。
+name: Release
+
+jobs:
+  release-please:
+    # 运行所需要的虚拟机环境,它是必填字段
+    runs-on: ubuntu-latest
+    # steps指定每个任务的运行步骤，可以包含一个或多个步骤。
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v3
+        id: release
+        with:
+          token: ${{ secrets.RELEASE_TOKEN }}
+          release-type: node
+          package-name: standard-version
+          changelog-types: '[{"type": "types", "section":"Types", "hidden": false},{"type": "revert", "section":"Reverts", "hidden": false},{"type": "feat", "section": "Features", "hidden": false},{"type": "fix", "section": "Bug Fixes", "hidden": false},{"type": "improvement", "section": "Feature Improvements", "hidden": false},{"type": "docs", "section":"Docs", "hidden": false},{"type": "style", "section":"Styling", "hidden": false},{"type": "refactor", "section":"Code Refactoring", "hidden": false},{"type": "perf", "section":"Performance Improvements", "hidden": false},{"type": "test", "section":"Tests", "hidden": false},{"type": "build", "section":"Build System", "hidden": false},{"type": "ci", "section":"CI", "hidden":false}]' 

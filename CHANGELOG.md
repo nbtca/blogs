@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/nbtca/blogs/compare/v1.0.4...v1.0.5) (2023-12-12)
+
+
+### chore
+
+* **main:** 自动部署bug-- ([4c6df30](https://github.com/nbtca/blogs/commit/4c6df30be7d702d541dd4e3ef73e2249264e8155))
+
 ## [1.0.4](https://github.com/nbtca/blogs/compare/v1.0.3...v1.0.4) (2023-12-12)
 
 

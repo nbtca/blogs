@@ -9,7 +9,7 @@ import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
 
-const DOMAIN_NAME = 'xugaoyi.com' // 域名 (不带https)
+const DOMAIN_NAME = 'nbtca.com' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
@@ -23,7 +23,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       description: 'nbtca博客',
     }
   },
-  // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
+  base: "/blogs/", // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
 
   // 主题配置
   themeConfig: {
@@ -193,7 +193,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     [
       "sitemap", // 网站地图
       {
-        // hostname: WEB_SITE,
+        hostname: 'https://nbtca.github.io/blogs/'
       },
     ],
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.10](https://github.com/nbtca/blogs/compare/v1.0.9...v1.0.10) (2023-12-16)
+
+
+### Bug Fixes
+
+* build ([cdf7eea](https://github.com/nbtca/blogs/commit/cdf7eea12c10ab72d7a096ecb3b50db59933b1ee))
+
 ## [1.0.9](https://github.com/nbtca/blogs/compare/v1.0.8...v1.0.9) (2023-12-16)
 
 

@@ -33,4 +33,4 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.RELEASE_TOKEN }}'
           MERGE_LABELS: ''
           # 只要是 lyq777-Xing 用户，都进行合并
-          MERGE_FILTER_AUTHOR: 'lyq777-Xing' 
+          MERGE_FILTER_AUTHOR: 'github-actions[bot]' 

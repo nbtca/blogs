@@ -19,3 +19,4 @@ jobs:
           token: ${{ secrets.RELEASE_TOKEN }}
           config-file: .github/workflows/release-please-config.json
           manifest-file: .github/workflows/release-please-manifest.json
+          release-type: node

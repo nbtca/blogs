@@ -1,4 +1,4 @@
-name: Auto Merge
+name: Automerge
 
 on:
   pull_request:
@@ -31,9 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           MERGE_LABELS: ''
+          # 只要是 github-actions[bot] 用户，都进行合并
+          MERGE_FILTER_AUTHOR: 'github-actions[bot]' 
           MERGE_FILTER_BRANCH: 'main'
           MERGE_METHOD: 'squash'
-          # auto marge if commit by github-actions[bot]
-          MERGE_FILTER_AUTHOR: 'github-actions\[bot\]'
-
-          

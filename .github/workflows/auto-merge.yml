@@ -32,7 +32,6 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           MERGE_LABELS: ''
           # merge if create by github-actions[bot]
-          # MERGE_AUTHORS: 'github-actions\[bot\]'
           MERGE_AUTHORS: 'github-actions[bot]'
           MERGE_FILTER_BRANCH: 'main'
           MERGE_METHOD: 'squash'

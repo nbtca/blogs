@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     # steps指定每个任务的运行步骤，可以包含一个或多个步骤。
     steps:
+      # config git to github-actions[bot]
+      - name: config git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
       - uses: GoogleCloudPlatform/release-please-action@v4
         id: release
         with:

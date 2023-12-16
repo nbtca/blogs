@@ -30,7 +30,7 @@ jobs:
       - name: Automerge
         uses: 'pascalgn/automerge-action@v0.14.3'
         env:
-          GITHUB_TOKEN: '${{ secrets.RELEASE_TOKEN }}'
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           MERGE_LABELS: ''
-          # 只要是 lyq777-Xing 用户，都进行合并
+          # 只要是 github-actions[bot] 用户，都进行合并
           MERGE_FILTER_AUTHOR: 'github-actions[bot]' 

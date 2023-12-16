@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/nbtca/blogs/compare/v1.0.6...v1.0.7) (2023-12-16)
+
+
+### Bug Fixes
+
+* remove unused comments ([69c0b28](https://github.com/nbtca/blogs/commit/69c0b285da10be4fc748d7e320022d14b6ad66ca))
+
 ## [1.0.14](https://github.com/nbtca/blogs/compare/v1.0.13...v1.0.14) (2023-12-16)
 
 

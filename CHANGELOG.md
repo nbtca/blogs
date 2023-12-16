@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.11](https://github.com/nbtca/blogs/compare/v1.0.10...v1.0.11) (2023-12-16)
+
+
+### Bug Fixes
+
+* change MERGE_FILTER_AUTHOR to github-actions[bot] ([7cbd311](https://github.com/nbtca/blogs/commit/7cbd3112fad7e973f4d49df67aef6c0cbb327fa8))
+* change secrets.RELEASE_TOKEN to secrets.GITHUB_TOKEN ([33e2053](https://github.com/nbtca/blogs/commit/33e2053f73dcc779f7d93cbe0a428838a21caa11))
+
 ## [1.0.10](https://github.com/nbtca/blogs/compare/v1.0.9...v1.0.10) (2023-12-16)
 
 

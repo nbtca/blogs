@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/nbtca/blogs/compare/v1.0.8...v1.0.9) (2023-12-16)
+
+
+### Bug Fixes
+
+* config git to github-actions[bot] ([1fc5bc2](https://github.com/nbtca/blogs/commit/1fc5bc2ac91314dda40ca436f050a2dc774c034f))
+
 ## [1.0.8](https://github.com/nbtca/blogs/compare/v1.0.7...v1.0.8) (2023-12-16)
 
 

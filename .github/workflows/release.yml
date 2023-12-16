@@ -13,10 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     # steps指定每个任务的运行步骤，可以包含一个或多个步骤。
     steps:
-      - uses: GoogleCloudPlatform/release-please-action@v3
+      - uses: GoogleCloudPlatform/release-please-action@v4
         id: release
         with:
           token: ${{ secrets.RELEASE_TOKEN }}
-          release-type: node
-          package-name: standard-version
-          changelog-types: '[{"type": "types", "section":"Types", "hidden": false},{"type": "revert", "section":"Reverts", "hidden": false},{"type": "feat", "section": "Features", "hidden": false},{"type": "fix", "section": "Bug Fixes", "hidden": false},{"type": "improvement", "section": "Feature Improvements", "hidden": false},{"type": "docs", "section":"Docs", "hidden": false},{"type": "style", "section":"Styling", "hidden": false},{"type": "refactor", "section":"Code Refactoring", "hidden": false},{"type": "perf", "section":"Performance Improvements", "hidden": false},{"type": "test", "section":"Tests", "hidden": false},{"type": "build", "section":"Build System", "hidden": false},{"type": "chore", "section":"chore", "hidden":false}]' 
+          config-file: .github/workflows/release-please-config.json
+          manifest-file: .github/workflows/release-please-manifest.json

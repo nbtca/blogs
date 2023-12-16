@@ -5,6 +5,16 @@
 
 ### Bug Fixes
 
+* . ([2ee474a](https://github.com/nbtca/blogs/commit/2ee474a250551a02abfacaec9184d2a775fc5179))
+* auto merge ([656f54a](https://github.com/nbtca/blogs/commit/656f54a834e7037a02c7f3a50e9598d6f47d7cf5))
+* auto-merge ([2eefa92](https://github.com/nbtca/blogs/commit/2eefa92104c9f6dc06ea03f6d54af49f8062d686))
+* auto-merge ([7245bb2](https://github.com/nbtca/blogs/commit/7245bb2ee2d6903c16180175751d71db1cc038fe))
+
+## [1.0.14](https://github.com/nbtca/blogs/compare/v1.0.13...v1.0.14) (2023-12-16)
+
+
+### Bug Fixes
+
 * auto merge ([656f54a](https://github.com/nbtca/blogs/commit/656f54a834e7037a02c7f3a50e9598d6f47d7cf5))
 * auto-merge ([2eefa92](https://github.com/nbtca/blogs/commit/2eefa92104c9f6dc06ea03f6d54af49f8062d686))
 * auto-merge ([7245bb2](https://github.com/nbtca/blogs/commit/7245bb2ee2d6903c16180175751d71db1cc038fe))

@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.12](https://github.com/nbtca/blogs/compare/v1.0.11...v1.0.12) (2023-12-16)
+
+
+### Bug Fixes
+
+* build ([2260edd](https://github.com/nbtca/blogs/commit/2260eddaae35a6d1ed27ca43f738460e0f1a5b2e))
+* build ([cdf7eea](https://github.com/nbtca/blogs/commit/cdf7eea12c10ab72d7a096ecb3b50db59933b1ee))
+* build ([7925b25](https://github.com/nbtca/blogs/commit/7925b25d5661d15f1581cdc3eefb28824c9fd4e6))
+* change MERGE_FILTER_AUTHOR to github-actions[bot] ([7cbd311](https://github.com/nbtca/blogs/commit/7cbd3112fad7e973f4d49df67aef6c0cbb327fa8))
+* change secrets.RELEASE_TOKEN to secrets.GITHUB_TOKEN ([33e2053](https://github.com/nbtca/blogs/commit/33e2053f73dcc779f7d93cbe0a428838a21caa11))
+* config git to github-actions[bot] ([1fc5bc2](https://github.com/nbtca/blogs/commit/1fc5bc2ac91314dda40ca436f050a2dc774c034f))
+* edit workflows ([58c9362](https://github.com/nbtca/blogs/commit/58c9362a6f08c2c557bcc2036b9712817bcb02f5))
+
 ## [1.0.11](https://github.com/nbtca/blogs/compare/v1.0.10...v1.0.11) (2023-12-16)
 
 

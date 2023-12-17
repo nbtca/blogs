@@ -1,11 +1,10 @@
 # on: 触发workflow的条件，通常是某些事件，例如：release、push、pull_request等。
 on:
-  workflow_run: 
-    workflows: ["auto-merge"] #自动合并后触发
+  workflow_run: #自动合并成功后触发
+    workflows: ["auto-merge"] 
     types:
       - completed
-
-  push:
+  push: #push代码时触发
     branches:
       - main
 
@@ -30,14 +29,3 @@ jobs:
           config-file: .github/workflows/release-please-config.json
           manifest-file: .github/workflows/release-please-manifest.json
           release-type: node
-      # 直接合并
-      - name: Auto Merge
-        uses: 'pascalgn/automerge-action@v0.15.6'
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          MERGE_LABELS: ''
-          # merge if create by github-actions[bot]
-          MARGE_FILTER_CREATOR: 'github-actions[bot]'
-          # MERGE_FILTER_BRANCH: 'main'
-          MERGE_METHOD: 'squash'

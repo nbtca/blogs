@@ -1,11 +1,16 @@
 # on: 触发workflow的条件，通常是某些事件，例如：release、push、pull_request等。
 on:
+  workflow_run: 
+    workflows: ["auto-merge"] #自动合并后触发
+    types:
+      - completed
+
   push:
     branches:
       - main
 
 # workflow的名称。如果省略该字段，默认为当前workflow的文件名。
-name: Release
+name: release
 
 jobs:
   release-please:

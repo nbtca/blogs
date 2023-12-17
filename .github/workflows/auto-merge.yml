@@ -1,12 +1,11 @@
 name: auto-merge
 
 on:
-  # triger if pr create by github-actions[bot]'
-  workflow_run: 
-    workflows: ["build-deploy"]
-    types:
-      - completed
-      
+  # workflow_run: 
+  #   workflows: ["release"] # release-please 后触发
+  #   types:
+  #     - completed
+
   pull_request:
     types:
       - labeled
@@ -21,7 +20,6 @@ on:
     types:
       - submitted
   # status: {}
-
 jobs:
   # 合并发布版本的 pr 到 main
   auto-merge:
@@ -38,6 +36,6 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           MERGE_LABELS: ''
           # merge if create by github-actions[bot]
-          MARGE_FILTER_CREATOR: 'github-actions[bot]'
+          MARGE_FILTER_CREATOR: 'github-actions\[bot\]'
           # MERGE_FILTER_BRANCH: 'main'
           MERGE_METHOD: 'squash'

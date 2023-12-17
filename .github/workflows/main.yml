@@ -3,6 +3,11 @@ name: build-deploy
 on:
   push:
     branches: [ "main" ]
+    paths-ignore: # 忽略的文件
+      - "README.md"
+      - "LICENSE"
+      - ".github/workflows/**"
+      - "CHANGELOG.md"
   pull_request:
     branches: [ "main" ]
 
@@ -28,7 +33,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4.5.0
       with:
         branch: gh-pages # 部署后提交到那个分支
-        # token: ${{ secrets.RELEASE_TOKEN }}
         token: ${{ secrets.GITHUB_TOKEN }}
         folder: docs/.vuepress/dist # 这里填打包好的目录名称
         clean: true

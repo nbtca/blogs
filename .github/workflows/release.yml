@@ -33,6 +33,7 @@ jobs:
       # 直接合并
       - name: Auto Merge
         uses: 'pascalgn/automerge-action@v0.15.6'
+        continue-on-error: true
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           MERGE_LABELS: ''

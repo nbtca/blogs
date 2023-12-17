@@ -4,6 +4,13 @@
 
 - edit workflows ([58c9362](https://github.com/nbtca/blogs/commit/58c9362a6f08c2c557bcc2036b9712817bcb02f5))
 
+## [1.0.12](https://github.com/nbtca/blogs/compare/v1.0.11...v1.0.12) (2023-12-17)
+
+
+### Bug Fixes
+
+* build ([d2cf11e](https://github.com/nbtca/blogs/commit/d2cf11e523a91aca7b213881ca5c09c8abb80900))
+
 ## [1.0.11](https://github.com/nbtca/blogs/compare/v1.0.10...v1.0.11) (2023-12-17)
 
 

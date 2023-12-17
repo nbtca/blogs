@@ -3,6 +3,10 @@ name: build-deploy
 on:
   push:
     branches: [ "main" ]
+    paths-ignore: # 忽略的文件
+      - "README.md"
+      - "LICENSE"
+      - ".github/workflows/**"
   pull_request:
     branches: [ "main" ]
 

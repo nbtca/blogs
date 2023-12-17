@@ -4,6 +4,14 @@
 
 - edit workflows ([58c9362](https://github.com/nbtca/blogs/commit/58c9362a6f08c2c557bcc2036b9712817bcb02f5))
 
+## [1.0.9](https://github.com/nbtca/blogs/compare/v1.0.8...v1.0.9) (2023-12-17)
+
+
+### Bug Fixes
+
+* build ([729045d](https://github.com/nbtca/blogs/commit/729045dfd92bee09ff97db86f43f72dd1dc69f76))
+* remove unused comments ([69c0b28](https://github.com/nbtca/blogs/commit/69c0b285da10be4fc748d7e320022d14b6ad66ca))
+
 ## [1.0.8](https://github.com/nbtca/blogs/compare/v1.0.7...v1.0.8) (2023-12-16)
 
 

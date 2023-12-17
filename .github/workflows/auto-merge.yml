@@ -1,6 +1,12 @@
-name: Automerge
+name: auto-merge
 
 on:
+  # triger if pr create by github-actions[bot]'
+  workflow_run: 
+    workflows: ["build-deploy"]
+    types:
+      - completed
+      
   pull_request:
     types:
       - labeled

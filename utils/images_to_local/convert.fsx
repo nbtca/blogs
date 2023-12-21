@@ -14,31 +14,30 @@ using (new System.Net.Http.HttpClient()) (fun http->
         let s = StringBuilder content //创建StringBuilder对象
         for m in httpRegex.Matches content do //匹配并遍历所有的图片链接
             let url = m.Value
-            if url.Contains "oss.chundot.xyz" then
-                printfn "file: %s \n image: %s" file url
-                url.Replace("https://", "http://")
-                    |> http.GetByteArrayAsync
-                    |> Async.AwaitTask
-                    |> Async.RunSynchronously
-                    |> fun bytes->
-                        let urlFileName = Path.GetFileName url
-                        let fileDir = Path.GetDirectoryName file
-                        let fileName = Path.GetFileNameWithoutExtension file 
-                        let fileName = Regex.Replace(fileName, @"^\d+\.", "")//移除序号
-                        let assetsDir = Path.Combine(fileDir, fileName+".assets")
-                        if assetsDir |> Directory.Exists |> not then assetsDir |> Directory.CreateDirectory |> ignore
-                        let filePath = Path.Combine(assetsDir, urlFileName)
-                        printfn "filePath: %s" filePath
-                        File.WriteAllBytes(filePath, bytes)
-                        let newUrl = "./"+Path.GetRelativePath(fileDir,filePath).Replace("\\","/")
-                        printfn "newUrl: %s" newUrl
-                        s.Replace(url, newUrl) |> ignore
+            printfn "file: %s \n image: %s" file url
+            try
+            url
+                |> fun url-> 
+                    if url.StartsWith("https://") && url.Contains("chundot") then
+                        url.Replace("https://", "http://")
+                    else url
+                |> http.GetByteArrayAsync
+                |> Async.AwaitTask
+                |> Async.RunSynchronously
+                |> fun bytes->
+                    let urlFileName = Path.GetFileName url
+                    let fileDir = Path.GetDirectoryName file
+                    //let fileName = Path.GetFileNameWithoutExtension file 
+                    //let fileName = Regex.Replace(fileName, @"^\d+\.", "")//移除序号
+                    let fileName=Guid.NewGuid().ToString("N")
+                    let assetsDir = Path.Combine(fileDir, "assets",fileName)
+                    if assetsDir |> Directory.Exists |> not then assetsDir |> Directory.CreateDirectory |> ignore
+                    let filePath = Path.Combine(assetsDir, urlFileName)
+                    printfn "filePath: %s" filePath
+                    File.WriteAllBytes(filePath, bytes)
+                    let newUrl = "./"+Path.GetRelativePath(fileDir,filePath).Replace("\\","/")
+                    printfn "newUrl: %s" newUrl
+                    s.Replace(url, newUrl) |> ignore
+            with e-> printfn "error: %s" e.Message
         File.WriteAllText(file, s.ToString()) //写入文件
 )
-
-
-
-
-
-
-

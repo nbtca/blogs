@@ -20,3 +20,4 @@ urls.txt
 
 # mac
 .DS_Store
+docs/.vuepress/.cache/

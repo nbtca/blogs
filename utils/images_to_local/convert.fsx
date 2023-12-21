@@ -12,6 +12,7 @@ using (new System.Net.Http.HttpClient()) (fun http->
     for file in Directory.GetFiles(baseDir, "*.md", SearchOption.AllDirectories) do
         let content = File.ReadAllText file //读取文件内容
         let s = StringBuilder content //创建StringBuilder对象
+        let contentDir=Guid.NewGuid().ToString("N")
         for m in httpRegex.Matches content do //匹配并遍历所有的图片链接
             let url = m.Value
             printfn "file: %s \n image: %s" file url
@@ -25,13 +26,17 @@ using (new System.Net.Http.HttpClient()) (fun http->
                 |> Async.AwaitTask
                 |> Async.RunSynchronously
                 |> fun bytes->
-                    let urlFileName = Path.GetFileName url
+                    let mutable urlFileName = Path.GetFileName url
                     let fileDir = Path.GetDirectoryName file
                     //let fileName = Path.GetFileNameWithoutExtension file 
                     //let fileName = Regex.Replace(fileName, @"^\d+\.", "")//移除序号
-                    let fileName=Guid.NewGuid().ToString("N")
-                    let assetsDir = Path.Combine(fileDir, "assets",fileName)
+                    let assetsDir = Path.Combine(fileDir, "assets",contentDir)
                     if assetsDir |> Directory.Exists |> not then assetsDir |> Directory.CreateDirectory |> ignore
+                    if Regex.IsMatch(urlFileName,@"^[A-Za-z0-9\.-]+$") |> not then
+                        printfn "urlFileName: %s" urlFileName
+                        //System.Console.ReadLine()|>ignore
+                        urlFileName <- Guid.NewGuid().ToString("N") + Path.GetExtension(urlFileName)
+                    urlFileName<-urlFileName.Replace(" ","-").Replace("%","-")
                     let filePath = Path.Combine(assetsDir, urlFileName)
                     printfn "filePath: %s" filePath
                     File.WriteAllBytes(filePath, bytes)

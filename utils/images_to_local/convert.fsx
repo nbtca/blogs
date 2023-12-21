@@ -14,9 +14,10 @@ using (new System.Net.Http.HttpClient()) (fun http->
         let s = StringBuilder content //创建StringBuilder对象
         for m in httpRegex.Matches content do //匹配并遍历所有的图片链接
             let url = m.Value
-            if url.Contains "oss.chundot.xyz" then
+            if true then
+            //if url.Contains "oss.chundot.xyz" then
                 printfn "file: %s \n image: %s" file url
-                url.Replace("https://", "http://")
+                url//.Replace("https://", "http://")
                     |> http.GetByteArrayAsync
                     |> Async.AwaitTask
                     |> Async.RunSynchronously

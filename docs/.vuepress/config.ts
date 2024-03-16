@@ -286,7 +286,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         repo: 'blogs',
         clientId: '85c75557c8864591fdea',
         clientSecret: '6cc0ee9a068cd26f0d0c57ad081ebfad036e7a0c',
-        proxy: 'https://192.168.43.126:8001/https://github.com/login/oauth/access_token',
         // autoCreateIssue: true,//自动创建评论
       }
     ],

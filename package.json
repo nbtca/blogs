@@ -3,7 +3,7 @@
   "version": "1.0.10",
   "scripts": {
     "dev": "set NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs",
     "predev": "node utils/check.js dev && vdoing",
     "prebuild": "node utils/check.js build && vdoing",
     "deploy": "bash deploy.sh",
@@ -32,6 +32,8 @@
   },
   "dependencies": {
     "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "anywhere": "^1.6.0",
     "vssue": "^1.4.8",
     "vue-let-it-snow": "^1.0.0"
   }

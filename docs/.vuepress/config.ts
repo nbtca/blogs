@@ -258,35 +258,38 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    [
-      'vuepress-plugin-comment', // 评论
-      {
-        choosen: 'gitalk',
-        options: {
-          clientID: '85c75557c8864591fdea',
-          clientSecret: '6cc0ee9a068cd26f0d0c57ad081ebfad036e7a0c',
-          repo: 'blogs', // GitHub 仓库
-          owner: 'nbtca', // GitHub仓库所有者
-          admin: ['lyq777-Xing','nbtca'], // 对仓库有写权限的人
-          // distractionFreeMode: true,
-          pagerDirection: 'last', // 'first'正序 | 'last'倒序
-          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-          body:
-            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-        },
-      },
-    ],
     // [
-    //   '@vssue/vuepress-plugin-vssue', {
-    //     platform: 'github',
-    //     owner: 'nbtca',
-    //     repo: 'blogs',
-    //     clientId: '85c75557c8864591fdea',
-    //     clientSecret: '6cc0ee9a068cd26f0d0c57ad081ebfad036e7a0c',
-    //   }
+    //   'vuepress-plugin-comment', // 评论
+    //   {
+    //     choosen: 'gitalk',
+    //     options: {
+    //       clientID: '85c75557c8864591fdea',
+    //       clientSecret: '6cc0ee9a068cd26f0d0c57ad081ebfad036e7a0c',
+    //       repo: 'blogs', // GitHub 仓库
+    //       owner: 'nbtca', // GitHub仓库所有者
+    //       admin: ['lyq777-Xing','nbtca'], // 对仓库有写权限的人
+    //       // distractionFreeMode: true,
+    //       pagerDirection: 'last', // 'first'正序 | 'last'倒序
+    //       id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+    //       title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+    //       labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+    //       body:
+    //         '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+    //     },
+    //   },
     // ],
+    [
+      '@vssue/vuepress-plugin-vssue', {
+        platform: 'github',
+        locale: 'zh', //语言
+        owner: 'nbtca',
+        repo: 'blogs',
+        clientId: '85c75557c8864591fdea',
+        clientSecret: '6cc0ee9a068cd26f0d0c57ad081ebfad036e7a0c',
+        proxy: 'https://192.168.43.126:8001/https://github.com/login/oauth/access_token',
+        // autoCreateIssue: true,//自动创建评论
+      }
+    ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {

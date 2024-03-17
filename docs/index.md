@@ -37,4 +37,6 @@ features: # 可选的
 <vueSnow></vueSnow>
 
 <Vssue title="test" :options="{ locale: 'zh' }" />
-<giscusBox></giscusBox>
+<ClientOnly>
+  <giscusBox/>
+</ClientOnly>

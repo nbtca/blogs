@@ -19,5 +19,6 @@ export default ({
     repo: 'blogs',
     clientId: '85c75557c8864591fdea',
     clientSecret: '6cc0ee9a068cd26f0d0c57ad081ebfad036e7a0c',
+    autoCreateIssue: true,//自动创建评论
   })
 }

@@ -35,3 +35,4 @@ features: # 可选的
 # hideRightBar: true # 是否隐藏右侧边栏
 ---
 <vueSnow></vueSnow>
+<giscusBox></giscusBox>
